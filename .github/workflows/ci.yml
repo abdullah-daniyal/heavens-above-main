@@ -24,11 +24,11 @@ jobs:
         run: npm install
 
       - name: Run Linter
-        # run: npm run lint
+        run: npm run lint
         run: echo "Running linting"
 
       - name: Run Tests
-        # run: npm test
+        run: npm test
         run: echo "Running tests"
 
       - name: Run main script
