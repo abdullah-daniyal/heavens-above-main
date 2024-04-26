@@ -1,0 +1,25 @@
+name: Scheduled Tasks
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC time.
+
+jobs:
+  scheduled-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Perform Data Backup
+      - name: backing up data
+        run: ./scripts/backup.sh
+
+      # Generate Report
+      - name: Generate Report
+        run: ./scripts/generate_report.sh
+
+      # Deploy Documentation
+      - name: Deploy Documentation
+        run: ./scripts/deploy_documentation.sh
