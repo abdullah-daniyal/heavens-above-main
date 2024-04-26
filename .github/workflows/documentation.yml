@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Install Node.js dependencies
+      # Install Node.js dependenciess
       - name: Install Node.js dependencies
         run: npm install
 
