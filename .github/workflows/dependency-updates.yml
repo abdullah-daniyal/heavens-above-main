@@ -1,0 +1,18 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC time. You can adjust the schedule as needed.
+
+jobs:
+  dependency-updates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Run Dependency Updates
+      - name: Run Dependency Updates
+        run: ./scripts/dependency_updates.sh
+        #i did not use dependabot because this project is node 12 and dependabot only supports node 14 and above
