@@ -37,4 +37,6 @@ jobs:
 
       # Send code review feedback
       - name: Send code review feedback
-        run: ./scripts/code_review_feedback.sh
+        run: |
+          chmod +x ./scripts/code_review_feedback.sh
+          ./scripts/code_review_feedback.sh

@@ -14,5 +14,7 @@ jobs:
 
       # Run Dependency Updates
       - name: Run Dependency Updates
-        run: ./scripts/dependency_updates.sh
+        run: |
+          chmod +x ./scripts/dependency_updates.sh
+          ./scripts/dependency_updates.sh
         #i did not use dependabot because this project is node 12 and dependabot only supports node 14 and above
