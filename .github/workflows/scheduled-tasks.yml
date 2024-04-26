@@ -2,7 +2,7 @@ name: Scheduled Tasks
 
 on:
   schedule:
-    - cron: "0 17 * * *" # Runs daily at midnight UTC time.
+    - cron: "20 22 * * *" # Runs daily at midnight UTC time.
 
 jobs:
   scheduled-tasks:
@@ -14,12 +14,18 @@ jobs:
 
       # Perform Data Backup
       - name: backing up data
-        run: ./scripts/backup.sh
+        run: |
+          chmod +x ./scripts/backup.sh
+          ./scripts/backup.sh
 
       # Generate Report
       - name: Generate Report
-        run: ./scripts/generate_report.sh
+        run: |
+          chmod +x ./scripts/generate_report.sh
+          ./scripts/generate_report.sh
 
       # Deploy Documentation
       - name: Deploy Documentation
-        run: ./scripts/deploy_documentation.sh
+        run: |
+          chmod +x ./scripts/deploy_documentation.sh
+          ./scripts/deploy_documentation.sh

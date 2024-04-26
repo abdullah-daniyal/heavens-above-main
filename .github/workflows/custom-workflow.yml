@@ -20,25 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate Release Notes
-        id: generate_notes
-        uses: decathlon/release-notes-generator-action@v1.4.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          configuration-path: ".github/release-notes-config.yml"
-
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.generate_notes.outputs.release_notes }}
-          draft: false
-          prerelease: false
-
         # Authenticate Snyk and run security scan
       - name: Authenticate Snyk and run security scan
         # run: npx snyk auth ${{ secrets.ASSIGNMENT_TOKEN }} # Provide your Snyk token here
