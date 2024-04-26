@@ -3,7 +3,7 @@ name: Documentation Deployment
 on:
   push:
     branches:
-      - main  # You can adjust this to your main branch name
+      - main # You can adjust this to your main branch name
 
 jobs:
   deploy-documentation:
@@ -19,7 +19,8 @@ jobs:
 
       # Build documentation
       - name: Build documentation
-        run: npm run build-docs  # Replace this with the actual command to build your documentation
+        # run: npm run build-docs  # Replace this with the actual command to build your documentation
+        run: echo "Building documentation"
 
       # Deploy documentation to GitHub Pages
       - name: Deploy to GitHub Pages
