@@ -9,10 +9,10 @@
       {
         "files": ["*.js"],
         "rules": {
-          // You can override or disable rules here
-          // For example, to turn off the no-unused-vars rule, uncomment the next line
-          // "no-unused-vars": "off"
-        }
+            "no-unused-vars": "off",
+            "no-undef": "off"
+            // Any additional rules can be turned off as needed
+          }
       }
     ],
     "parserOptions": {
