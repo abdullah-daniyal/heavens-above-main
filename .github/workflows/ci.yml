@@ -1,0 +1,33 @@
+name: Continuous Integration
+
+# This workflow is triggered on pushes to the repository's main branch.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16" # Choose the Node.js version that matches your project requirements.
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Run main script
+        run: npm start
