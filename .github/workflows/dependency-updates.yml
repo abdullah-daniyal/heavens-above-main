@@ -2,7 +2,7 @@ name: Dependency Updates
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight UTC time. You can adjust the schedule as needed.
+    - cron: "0 17 * * *" # Runs daily at midnight UTC time. You can adjust the schedule as needed.
 
 jobs:
   dependency-updates:

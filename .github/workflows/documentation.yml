@@ -19,7 +19,7 @@ jobs:
 
       # Build documentation
       - name: Build documentation
-        # run: npm run build-docs  # Replace this with the actual command to build your documentation
+        # run: npm run build-docs
         run: echo "Building documentation"
 
       # Deploy documentation to GitHub Pages
