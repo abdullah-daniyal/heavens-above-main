@@ -1,0 +1,30 @@
+name: Documentation Deployment
+
+on:
+  push:
+    branches:
+      - main  # You can adjust this to your main branch name
+
+jobs:
+  deploy-documentation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Install Node.js dependencies
+      - name: Install Node.js dependencies
+        run: npm install
+
+      # Build documentation
+      - name: Build documentation
+        run: npm run build-docs  # Replace this with the actual command to build your documentation
+
+      # Deploy documentation to GitHub Pages
+      - name: Deploy to GitHub Pages
+        # uses: peaceiris/actions-gh-pages@v3
+        # with:
+        #   github_token: ${{ secrets.GITHUB_TOKEN }}
+        #   publish_dir: ./docs  # Specify the directory where your documentation is built
+        run: echo "Deploying documentation to GitHub Pages"
