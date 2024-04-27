@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Linter
         run: npm run lint
-        run: echo "Running linting"
+        # run: echo "Running linting"
 
       - name: Run Tests
         run: npm test
