@@ -18,8 +18,8 @@ jobs:
 
       # Run linting and code analysis
       - name: Run linting and code analysis
-        # run: npm run lint
-        run: echo "Running linting"
+        run: npm run lint
+        # run: echo "Running linting"
 
       # Run tests
       - name: Run tests
