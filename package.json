@@ -1,13 +1,14 @@
 {
   "name": "heavens-above",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Scripts for scraping the Heavens Above website.",
   "main": "run.js",
   "scripts": {
     "start": "node run.js",
+    "test": "echo \"No test specified\"",
     "lint": "eslint .",
-    "test": "echo \"No tests yet\""
+    "docs": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
@@ -31,7 +32,10 @@
     "node": ">=12.10.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.2.0",
-    "eslint": "^9.1.1"
+    "@eslint/js": "^9.1.1",
+    "eslint": "^9.1.0",
+    "firebase-tools": "^13.7.5",
+    "globals": "^15.0.0",
+    "jsdoc": "^4.0.2"
   }
 }
