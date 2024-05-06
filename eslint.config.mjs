@@ -4,7 +4,7 @@ export default {
     ecmaVersion: 2021,
     sourceType: "module",
     globals: {
-      $: "readonly",
+      $: "readonly", // for jQuery
     },
   },
   rules: {
