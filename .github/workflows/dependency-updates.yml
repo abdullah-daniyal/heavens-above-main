@@ -1,20 +1,20 @@
-name: Dependency Updates
+# name: Dependency Updates
 
-on:
-  schedule:
-    - cron: "0 17 * * *" # Runs daily at midnight UTC time. You can adjust the schedule as needed.
+# on:
+#   schedule:
+#     - cron: "0 17 * * *" # Runs daily at midnight UTC time. You can adjust the schedule as needed.
 
-jobs:
-  dependency-updates:
-    runs-on: ubuntu-latest
+# jobs:
+#   dependency-updates:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      # Run Dependency Updates
-      - name: Run Dependency Updates
-        run: |
-          chmod +x ./scripts/dependency_updates.sh
-          ./scripts/dependency_updates.sh
-        #i did not use dependabot because this project is node 12 and dependabot only supports node 14 and above
+#       # Run Dependency Updates
+#       - name: Run Dependency Updates
+#         run: |
+#           chmod +x ./scripts/dependency_updates.sh
+#           ./scripts/dependency_updates.sh
+#         #i did not use dependabot because this project is node 12 and dependabot only supports node 14 and above
